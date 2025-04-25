@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body>
+   
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Hospital Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin_login.html">Admin Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="jumbotron text-center fade-in">
+        <h1 class="display-4">Welcome to the Hospital Management System</h1>
+        <p class="lead">A simple and effective way to manage your hospital's daily operations.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/add new patient.jpeg" class="card-img-top" alt="Add Patient">
+                    <div class="card-body">
+                        <h5 class="card-title">Add New Patient</h5>
+                        <p class="card-text">Add new patients to the hospital system.</p>
+                        <a href="add_patient.html" class="btn btn-primary">Add Patient</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/view patient.webp" class="card-img-top" alt="View Patients">
+                    <div class="card-body">
+                        <h5 class="card-title">View Patients</h5>
+                        <p class="card-text">View a list of all registered patients.</p>
+                        <a href="view_patients.php" class="btn btn-primary">View Patients</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/book appointment.avif" class="card-img-top" alt="Book Appointment">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Appointment</h5>
+                        <p class="card-text">Schedule appointments with doctors.</p>
+                        <a href="book_appointment.html" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="about-title">About Us</h2>
+            <p class="lead about-text">Our Hospital Management System is designed to simplify the management of hospital operations such as patient admissions, appointments, and more. We aim to improve patient care, streamline administrative tasks, and enhance overall efficiency.</p>
+        </div>
+    </section>
+     <!-- Testimonials Section -->
+    <section class="bg-info text-white py-5">
+        <div class="container text-center">
+            <h2>What Our Patients Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <blockquote class="blockquote d-flex flex-column justify-content-between h-100">
+                        <p class="mb-0">"The hospital management system made it so easy to book my appointments and track my treatment history. Highly recommend!"</p>
+                        <footer class="blockquote-footer">John Doe, <cite title="Source Title">Patient</cite></footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <blockquote class="blockquote d-flex flex-column justify-content-between h-100">
+                        <p class="mb-0">"A seamless experience from the moment I walked in. The staff was friendly, and the system was efficient."</p>
+                        <footer class="blockquote-footer">Jane Smith, <cite title="Source Title">Patient</cite></footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <blockquote class="blockquote d-flex flex-column justify-content-between h-100">
+                        <p class="mb-0">"The admin panel made it easy to manage the hospital and patients. It is a very user-friendly system."</p>
+                        <footer class="blockquote-footer">Dr. Robert, <cite title="Source Title">Doctor</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Hospital Management System | All Rights Reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="add_patient.css">
+    
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">HMS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="book_appointment.html">Book Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin_login.html">Admin Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="jumbotron text-center bg-info text-white">
+        <h1 class="display-4">Welcome to Hospital Management System</h1>
+        <p class="lead">A simple and effective way to manage your hospital's daily operations</p>
+    </header>
+
+    <!-- Patient Form Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h3 class="text-center mb-4">Add New Patient</h3>
+                <!-- Form to add a new patient -->
+                <form id="add-patient-form" action="add_patient.php" method="POST" class="p-4 bg-light shadow rounded" onsubmit="return validateForm()" novalidate>
+                    <div class="form-group">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" class="form-control" id="patientName" name="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Age</label>
+                        <input type="number" class="form-control" id="patientAge" name="patientAge" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientGender">Gender</label>
+                        <select class="form-control" id="patientGender" name="patientGender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientContact">Contact Number</label>
+                        <input type="text" class="form-control" id="patientContact" name="patientContact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientEmail">Email</label>
+                        <input type="email" class="form-control" id="patientEmail" name="patientEmail" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Add Patient</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Hospital Management System | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // JavaScript function for form validation
+        function validateForm() {
+            var name = document.getElementById("patientName").value;
+            var age = document.getElementById("patientAge").value;
+            var contact = document.getElementById("patientContact").value;
+            var errorMessage = "";
+
+            // Clear out any previous errors
+            errorMessage = "";
+
+            // Validate Patient Name
+            if (name == "") {
+                errorMessage += "Patient Name is required.\n";
+            }
+
+            // Validate Age
+            if (age == "" || isNaN(age) || age < 0 || age > 120) {
+                errorMessage += "Please enter a valid age (between 0 and 120).\n";
+            }
+
+            // Validate Contact Number
+            if (contact == "" || isNaN(contact)) {
+                errorMessage += "Please enter a valid contact number.\n";
+            }
+
+            // If there are validation errors, show them in an alert and prevent form submission
+            if (errorMessage != "") {
+                alert(errorMessage);
+                return false;  // Prevent form submission
+            }
+
+            return true;  // Allow form submission
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

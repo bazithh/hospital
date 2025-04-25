@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS for styling and effects -->
+    <style>
+        body {
+            background-color: #f1f8ff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #0066cc;
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #eaf2ff;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #0066cc;
+            border-color: #0066cc;
+        }
+
+        .btn-primary:hover {
+            background-color: #004b99;
+            border-color: #004b99;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        #services .card {
+            margin-bottom: 20px;
+        }
+
+        #contact .form-control {
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Dark theme for Contact section */
+        #contact {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 40px 0;
+            border-radius: 10px;
+        }
+
+        #contact h2 {
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 32px;
+        }
+
+        .list-unstyled li {
+            color: #f8f9fa;
+        }
+
+        .form-control {
+            background-color: #495057;
+            border: 1px solid #ced4da;
+            color: #f8f9fa;
+        }
+
+        .form-control:focus {
+            background-color: #343a40;
+            color: #fff;
+            border-color: #80bdff;
+            box-shadow: none;
+        }
+
+        .btn-primary {
+            background-color: #0066cc;
+            border-color: #0066cc;
+        }
+
+        .btn-primary:hover {
+            background-color: #004b99;
+            border-color: #004b99;
+        }
+
+        /* Animated gradient background for the Contact section */
+        @keyframes animated-gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #contact {
+            background: linear-gradient(45deg, #0066cc, #004b99, #003366);
+            background-size: 400% 400%;
+            animation: animated-gradient 15s ease infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hospital Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section (Book Appointment) -->
+    <div class="container">
+        <div class="card">
+            <img src="assets/book appointment.avif" class="card-img-top" alt="Book Appointment">
+            <div class="card-body">
+                <h5 class="card-title">Book Appointment</h5>
+                <p class="card-text">Schedule appointments with doctors with ease.</p>
+                <a href="book_appointment.html" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="container my-5">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row">
+            <!-- Service 1 -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+                <div class="card">
+                    <img src="assets/online-doctor-consultation-services.jpg" class="card-img-top" alt="Consultation">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultation</h5>
+                        <p class="card-text">Expert medical consultation from experienced doctors.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Service 2 -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+                <div class="card">
+                    <img src="assets/emergency services.jpg" class="card-img-top" alt="Emergency Services">
+                    <div class="card-body">
+                        <h5 class="card-title">Emergency Services</h5>
+                        <p class="card-text">24/7 emergency medical assistance for critical situations.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Service 3 -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+                <div class="card">
+                    <img src="assets/surgery.jpeg" class="card-img-top" alt="Surgery">
+                    <div class="card-body">
+                        <h5 class="card-title">Surgery</h5>
+                        <p class="card-text">Advanced surgical options for a variety of medical conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+
+        <!-- Contact Information -->
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Contact Information</h5>
+                <ul class="list-unstyled">
+                    <li><strong>Address:</strong> 123 Medical St, Health City, HC 12345</li>
+                    <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+                    <li><strong>Email:</strong> info@hospital.com</li>
+                </ul>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <h5>Send us a Message</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
